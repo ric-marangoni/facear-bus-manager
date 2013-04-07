@@ -1,0 +1,44 @@
+<mockup version="1.0" skin="sketch" measuredW="747" measuredH="456" mockupW="245" mockupH="437">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::iPhone" x="502" y="19" w="245" h="437" measuredW="282" measuredH="510" zOrder="0" locked="false" isInGroup="-1"/>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::SubTitle" x="536" y="131" w="-1" h="-1" measuredW="116" measuredH="28" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>20</size>
+        <text>BEM-VINDO</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::PointyButton" x="536" y="192" w="171" h="-1" measuredW="87" measuredH="27" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>solicitacao_visto%26bm%3Bsolicitacao_visto.bmml%26bm%3Bsolicitacao_visto.bmml%26bm%3Bsolicitacao_visto.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%2234%2C173%2C205%2C200%22%20href%3D%22solicitacao_visto.bmml%22%20alt%3D%22solicitacao_visto%22%20id%3D%223%22/%3E</map>
+        <size>12</size>
+        <text>solicitar%20visto</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::HRule" x="539" y="152" w="168" h="-1" measuredW="100" measuredH="5" zOrder="3" locked="false" isInGroup="-1"/>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::PointyButton" x="536" y="234" w="171" h="-1" measuredW="171" measuredH="27" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>consulta_situacao_visto%26bm%3Bconsulta_situacao_visto.bmml%26bm%3Bconsulta_situacao_visto.bmml%26bm%3Bconsulta_situacao_visto.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%2234%2C215%2C205%2C242%22%20href%3D%22consulta_situacao_visto.bmml%22%20alt%3D%22consulta_situacao_visto%22%20id%3D%2210%22/%3E</map>
+        <size>12</size>
+        <text>situa%E7%E3o%20do%20visto%20%28abril/2013%29</text>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::Label" x="536" y="283" w="-1" h="-1" measuredW="146" measuredH="21" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>O%20per%EDodo%20de%20solicita%E7%E3o</text>
+      </controlProperties>
+    </control>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::Label" x="536" y="304" w="131" h="22" measuredW="122" measuredH="21" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>deste%20m%EAs%20%E9%20do%20dia%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::Label" x="573" y="333" w="-1" h="-1" measuredW="101" measuredH="28" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>20</size>
+        <text>1%20ao%20dia%2012</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
