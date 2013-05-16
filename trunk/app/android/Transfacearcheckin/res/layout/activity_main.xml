@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/bg_app2"
+    android:padding="10dp" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="37dp"
+        android:text="@string/welcome"
+        android:textColor="#22390C"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/btn_solic_visto"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="73dp"
+        android:text="solicitar visto"  
+        android:textColor="#000020"
+        android:textStyle="bold"
+        android:background="@drawable/btn_bg" />
+
+    <Button
+        android:id="@+id/btn_situacao_visto"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/btn_solic_visto"
+        android:layout_below="@+id/btn_solic_visto"
+        android:layout_marginTop="25dp"
+        android:textColor="#000020"
+        android:textStyle="bold"
+        android:background="@drawable/btn_bg"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btn_situacao_visto"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="69dp"
+        android:text="O período de solicitação deste mês é do dia:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#22390C" />
+    
+    <ProgressBar
+        android:id="@+id/loading_periodo_solicitacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/periodo_solicitacao"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/loading_periodo_solicitacao"
+        android:gravity="center_horizontal"
+        android:text=""
+        android:textAlignment="center"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#22390C"
+        android:textStyle="bold" />
+
+</RelativeLayout>
