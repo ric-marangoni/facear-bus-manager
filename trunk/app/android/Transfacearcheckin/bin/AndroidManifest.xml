@@ -31,6 +31,9 @@
         <activity 
             android:name="br.com.transfacearcheckin.activity.SituacaoVistoActivity"
             android:screenOrientation="portrait" />
+        <activity 
+            android:name="br.com.transfacearcheckin.activity.ConsultaSituacaoVistoActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

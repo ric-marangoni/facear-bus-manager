@@ -3,7 +3,6 @@ package br.com.transfacearcheckin.ajax;
 import java.util.ArrayList;
 
 import org.apache.http.NameValuePair;
-import org.apache.http.message.BasicNameValuePair;
 
 import br.com.transfacearcheckin.lib.Ajax;
 import br.com.transfacearcheckin.lib.Config;
@@ -30,9 +29,7 @@ public class MainAjax extends AsyncTask<String, String, String> {
 			try {
 				
 				ArrayList<NameValuePair> parametrosPost = new ArrayList<NameValuePair>();
-				//parametrosPost.add(new BasicNameValuePair("usuario", paramss[1]));// /passa os parametros do // usuário
-				//parametrosPost.add(new BasicNameValuePair("senha", paramss[2]));// /passa os parametros da senha
-				
+								
 				// Simula processo...				
 				retorno = Ajax.httpPost(Config.HTTP_URL + "android/getPeriodoSolicitacao", parametrosPost);
 				

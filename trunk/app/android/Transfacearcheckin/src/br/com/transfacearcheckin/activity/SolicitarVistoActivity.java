@@ -1,20 +1,22 @@
 package br.com.transfacearcheckin.activity;
 
-import java.util.ArrayList;
-import java.util.List;
-
+import br.com.transfacearcheckin.ajax.ComboLinhasAjax;
+import br.com.transfacearcheckin.ajax.SolicitarVistoAjax;
 import br.com.transfacearckeckin.R;
 import android.app.Activity;
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
+import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 
-public class SolicitarVistoActivity extends Activity {
+public class SolicitarVistoActivity extends Activity implements OnClickListener {
 	
-	private List<String> locais = new ArrayList<String>();
+	private Button btn_solicitar_visto;
 	private Spinner spinner_entrada;
 	private Spinner spinner_saida;
+	private EditText matricula; 
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -23,26 +25,40 @@ public class SolicitarVistoActivity extends Activity {
 		
 		this.capturaViews();
 		
-		locais.add("Portão");
-		locais.add("CIC");
-		locais.add("Pinheirinho");
-		locais.add("Capão Raso");
-		locais.add("Sítio Cercado");
+		ComboLinhasAjax ComboLinhas = new ComboLinhasAjax();
+		ComboLinhas.setView(getWindow().getDecorView().getRootView());
+		ComboLinhas.setSpinnerLayout(android.R.layout.simple_spinner_item);
+		ComboLinhas.setActivity(this);
+		ComboLinhas.execute();
 		
-		//Cria um ArrayAdapter usando um padrão de layout da classe R do android, passando o ArrayList nomes
-		ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, locais);
-		ArrayAdapter<String> spinnerArrayAdapter = arrayAdapter;
-		spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
-		
-		this.spinner_entrada.setAdapter(spinnerArrayAdapter);
-		this.spinner_saida.setAdapter(spinnerArrayAdapter);
+		this.btn_solicitar_visto.setOnClickListener(this);
 		
 	}
 	
 	private void capturaViews() {
+		this.btn_solicitar_visto = (Button) findViewById(R.id.btn_solicitar_visto);		
 		this.spinner_entrada = (Spinner) findViewById(R.id.spinner_entrada);
 		this.spinner_saida = (Spinner) findViewById(R.id.spinner_saida);
+		this.matricula = (EditText) findViewById(R.id.matricula);
 		
 	}
+	
+	public void onClick(View view) {
+		
+		switch(view.getId()) {
+			case R.id.btn_solicitar_visto:
+				
+				SolicitarVistoAjax Solicitar = new SolicitarVistoAjax();
+				Solicitar.setActivity(this);
+				Solicitar.execute(
+						String.valueOf(this.spinner_entrada.getSelectedItemId()), 
+						String.valueOf(this.spinner_saida.getSelectedItemId()),
+						this.matricula.getText().toString()
+						);
+				
+				break;
+		}
+		
+	} 
 	
 }

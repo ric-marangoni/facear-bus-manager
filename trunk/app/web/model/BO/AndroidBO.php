@@ -8,6 +8,10 @@ class AndroidBO {
         return $this->dao->getPeriodoSolicitacao();
     }
     
+    public function getComboLinhas() {
+        return $this->dao->getComboLinhas();        
+    }
+    
     public function __construct() {
         $this->dao = new AndroidDAO();
     }
