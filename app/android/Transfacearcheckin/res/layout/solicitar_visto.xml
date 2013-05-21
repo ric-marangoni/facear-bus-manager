@@ -57,7 +57,7 @@
         android:inputType="number" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/btn_solicitar_visto"
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_marginTop="35dp"

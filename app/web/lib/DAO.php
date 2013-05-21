@@ -2,7 +2,7 @@
 
 class DAO {
 	
-	protected $conn;
+	private $conn;
 	
 	protected function open() {
 		
@@ -19,5 +19,9 @@ class DAO {
 	protected function close() {
 		$this->conn = null;
 	}
+    
+    public function __get($name) {
+        return $this->$name;
+    }
 	
 }
